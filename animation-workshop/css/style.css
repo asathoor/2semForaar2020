@@ -1,0 +1,12 @@
+/* file: css/style.css */
+#scene{
+    position: relative
+    width: 100%;
+    height: 100%;
+} 
+
+/* animation workshop */
+ufo {
+    width: 50px;
+    height: auto;
+}
