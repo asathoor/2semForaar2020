@@ -1,6 +1,3 @@
-JavaScript Boilerplates
-=======================
+# JavaScript Boilerplate: Video
 
-In this directory you'll find several JavaScript boilterplates.
-
-* jsBoilerplate.html: Vanilla JavaScript
+Here is a vanilla Javascript for videos.
