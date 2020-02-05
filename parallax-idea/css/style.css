@@ -1,0 +1,50 @@
+/**
+ * file: style.css
+ * project: parallax-idea
+ * purpose: styles, animation etc
+ * further development: meyer reset perhaps?
+ **/
+body,
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  height: 50vh;
+  background: purple;
+  color: #fff;
+  text-align: center;
+  line-height: 33vh;
+}
+
+.a {
+  height: 100vh;
+  background: yellow;
+}
+
+.b {
+  height: 100vh;
+  background: purple;
+  color: #fff;
+}
+
+.xx {
+  background-color: #ff0000;
+}
+
+#anima_1 {
+  background-color: orange;
+}
+#anima_2 {
+  background-color: lime;
+}
+#anima_3 {
+  background-color: aqua;
+}
+
+.anima {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+}
