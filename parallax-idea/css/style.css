@@ -10,6 +10,10 @@ h1 {
   padding: 0px;
 }
 
+#bee {
+    position: absolute;
+}
+
 header {
   height: 50vh;
   background: purple;
@@ -34,10 +38,11 @@ header {
 }
 
 #anima_1 {
-  background-color: orange;
+  /*background-color: orange;*/
 }
 #anima_2 {
   background-color: lime;
+    
 }
 #anima_3 {
   background-color: aqua;
@@ -45,6 +50,6 @@ header {
 
 .anima {
   position: absolute;
-  width: 65px;
-  height: 65px;
+  /*width: 65px;
+  height: 65px;*/
 }
