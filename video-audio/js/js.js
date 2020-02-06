@@ -5,19 +5,41 @@
  **/
 
 var myVideo = document.getElementById("myVideo"); 
+// preload
 myVideo.width = 420;
 myVideo.controls = true;
 
+// the ON / OFF trick
 function playPause() { 
-  if (myVideo.paused) 
+  if (myVideo.paused) {
     myVideo.play(); 
-  else 
+    myVideo.controls = false;
+      }
+  else {
     myVideo.pause(); 
+    myVideo.controls = true;
+    }
 } 
 
 function makeBig() { 
     myVideo.width = 1000; 
+    
 } 
+
+// muting sound
+function shutUpPlease() { 
+    // ... logic here: write some code that will mute the video ...
+    // document.getElementById("myVideo").muted = true;
+    myVideo.muted = true;
+}
+
+// "unmuting" sound
+function orangeAmp() { 
+    // ... logic here: write some code that will mute the video ...
+    // document.getElementById("myVideo").muted = true;
+    myVideo.muted = false;
+}
+
 
 function makeSmall() { 
     myVideo.width = 200; 

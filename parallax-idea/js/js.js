@@ -19,7 +19,6 @@ let myParallax = function(){
     fast = -300;
    } 
     
-
 }
 
 document.addEventListener("scroll", myParallax);
