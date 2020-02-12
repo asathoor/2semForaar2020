@@ -5,7 +5,7 @@
  **/
 
 // Create an object:
-var person = {
+let person = {
   firstName: "John",
   lastName : "Doe",
   id     : 5566,
@@ -18,19 +18,21 @@ var person = {
 Note: the object is person. The object has properties, such e.g. firstName. The object also has a method, in this case fullName. The keyword "this" refers "to the owner object" (quote from W3 schools).
 */
 
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+
+/* Alternative: call */
+
 /*
 The Call Method:
-var person2 = {
+let person2 = {
   firstName:"John",
   lastName: "Doe",
 }
 person1.fullName.call(person2);  // Will return "John Doe"
 */
 
-// Display data from the object:
-document.getElementById("demo").innerHTML = person.fullName();
-
-/* ---------- INSTANCES ---------- */
+/* ---------- INSTANCE ---------- */
 
 /*
 
