@@ -6,20 +6,39 @@
 
 // Create an object:
 let person = {
-  firstName: "John",
-  lastName : "Doe",
-  id     : 5566,
-  fullName : function() {
-    return this.firstName += " " + this.lastName;
-  }
+	firstName: "John",
+	lastName: "Doe",
+	id: 5566,
+	fullName: function () {
+		return this.firstName + " " + this.lastName; // this
+	}
 };
 
-/*
-Note: the object is person. The object has properties, such e.g. firstName. The object also has a method, in this case fullName. The keyword "this" refers "to the owner object" (quote from W3 schools).
-*/
+let myObject = {
+	taste: "Hot",
+	size: "Small",
+	hot: false,
+	name: "Andy Warhol",
+	thing: "Campbells Tomato Soup",
+	image: "greenman.jpg",
+	nameAndImage: function () {
+		return this.size + " xxx " + this.image; // this
+	},
+	showImage: function () {
+		return '<img src="../images/' +
+			this.image +
+			'" alt="the alt text">';
+	}
+}
 
 // Display data from the object:
-document.getElementById("demo").innerHTML = person.fullName();
+let aa = document.getElementById("demo");
+
+aa.innerHTML += person.fullName();
+aa.innerHTML += '<br>' + myObject.nameAndImage();
+aa.innerHTML += myObject.showImage();
+
+
 
 /* Alternative: call */
 
@@ -47,4 +66,3 @@ var course2 = new Course("CS1600", "Whot", 99);
 console.log(course2.name); // CS1600
 
 */
-
