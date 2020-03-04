@@ -5,6 +5,7 @@
 
 /* css variables */
 :root {
+  --col-1: orange;
   --col-2: black;
   --col-3: blue;
   --text-col-white: white;
@@ -20,7 +21,7 @@ header, footer {
     color: var(--text-col-white);
     padding: 2rem;
     text-align: center;
-    height: 25vh;
+    height: 20vh;
 }
 
 footer nav ul {
@@ -31,7 +32,7 @@ footer nav ul {
 
 #map {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
 }
 
 #btn_1 {
@@ -39,4 +40,8 @@ footer nav ul {
     color: var(--text-col-white);
     padding: 2rem;
     border-radius: 17px;
+}
+
+#btn_1:hover {
+    background-color: var(--col-1);
 }
