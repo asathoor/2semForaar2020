@@ -1,0 +1,42 @@
+/**
+ * file: css/css.css
+ * purpose: workshop suggested solution
+ **/
+
+/* css variables */
+:root {
+  --col-2: black;
+  --col-3: blue;
+  --text-col-white: white;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header, footer {
+    background-color: var(--col-2);
+    color: var(--text-col-white);
+    padding: 2rem;
+    text-align: center;
+    height: 25vh;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#map {
+    width: 100%;
+    height: 50vh;
+}
+
+#btn_1 {
+    background-color: var(--col-3);
+    color: var(--text-col-white);
+    padding: 2rem;
+    border-radius: 17px;
+}
