@@ -1,91 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>Attach a popup to a marker instance</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
-<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
-<style>
-	body { margin: 0; padding: 0; }
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
+	<meta charset="utf-8" />
+	<title>Attach a popup to a marker instance</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+	<!-- 
+		Q: HOW CAN I ADD JQUERY ?? 
+		A: Use a CDN as below ...
+	-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!-- mapbox related stuff -->
+	<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+	<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#map {
+			position: relative;
+			/*bottom: 0;*/
+			height: 50vh;
+			width: 100%;
+		}
+	</style>
 </head>
+
 <body>
-<style>
-    #marker {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Osiris_2.jpg');
-		background-color: red;
-        background-size: cover;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-	
-	#mark2 {
-        background-image: url('');
-		background-color: greenyellow;
-        background-size: cover;
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
+	<style>
+		#marker {
+			background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Osiris_2.jpg');
+			background-color: red;
+			background-size: cover;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
 
-    .mapboxgl-popup {
-        max-width: 200px;
-    }
-</style>
+		#mark2 {
+			background-image: url('');
+			background-color: greenyellow;
+			background-size: cover;
+			width: 75px;
+			height: 75px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
 
-<div id="map"></div>
+		.mapboxgl-popup {
+			max-width: 200px;
+		}
 
-<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
+		.xxxx {}
+	</style>
 
-	// geographical positions
-    var monument = [10.185,56.179];
-	let mon2 = [11.300,56.111]; // new position
-    
-	var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/asathoor/ck7d1fge80ihv1iodyv2wngjb',
-        center: monument,
-        zoom: 7
-    });
+	<div id="map"></div>
 
-    // create the popup texts
-    var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        'I am the original pop up.'
-    );
-	
-	let pop2 = new mapboxgl.Popup({ offset: 25 }).setText(
-        'I am the second pop up'
-    );
-	
+	<article>
+		<h1>Content from here...</h1>
 
-    // create DOM element for the marker
-    var el = document.createElement('div');
-    el.id = 'marker';
-	el.classList.add("xxxx");
-	
-	// create DOM elementS for the next marker
-    var el2 = document.createElement('div');
-    el2.id = 'mark2';
-	el2.classList.add("xxxx");
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aspernatur quia esse, possimus totam atque iure unde nulla eum recusandae libero quasi sit culpa sapiente explicabo, inventore error. Reiciendis, non.</p>
 
-    // create the marker
-    new mapboxgl.Marker(el)
-        .setLngLat(monument)
-        .setPopup(popup) // sets a popup on this marker
-        .addTo(map);
-	
-	// create the marker
-    new mapboxgl.Marker(el2)
-        .setLngLat(mon2)
-        .setPopup(pop2) // sets a popup on this marker
-        .addTo(map);
-</script>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aspernatur quia esse, possimus totam atque iure unde nulla eum recusandae libero quasi sit culpa sapiente explicabo, inventore error. Reiciendis, non.</p>
+	</article>
 
-</body>
-</html>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
+
+		// geographical positions
+		var monument = [10.185, 56.179];
+		let mon2 = [11.300, 56.111]; // new position
+
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/asathoor/ck7d1fge80ihv1iodyv2wngjb',
+			center: monument,
+			zoom: 7
+		});
+
+		// create the popup texts
+		var popup = new mapboxgl.Popup({
+			offset: 25
+		}).setText(
+			'I am the original pop up.'
+		);
+
+		let pop2 = new mapboxgl.Popup({
+			offset: 25
+		}).setText(
+			'I am the second pop up'
+		);
+
+
+		// create DOM element for the marker
+		var el = document.createElement('div');
+		el.id = 'marker';
+		el.classList.add("xxxx");
+
+		// create DOM elementS for the next marker
+		var el2 = document.createElement('div');
+		el2.id = 'mark2';
+		el2.classList.add("xxxx");
+
+		// create the marker
+		new mapboxgl.Marker(el)
+			.setLngLat(monument)
+			.setPopup(popup) // sets a popup on this marker
+			.addTo(map);
+
+		// create the marker
+		new mapboxgl.Marker(el2)
+			.setLngLat(mon2)
+			.setPopup(pop2) // sets a popup on this marker
+			.addTo(map);
+
+		// do we have jQuery?
+		$('p:last-child').append('<p>Yes we have JQ</p>'); // JQ test
+
+		$('p:last-child').click(function() {
+			// fly with default options to null island
+			map.flyTo({
+				center: [0, 0],
+				zoom: 9
+			});
+			// using flyTo options
+			map.flyTo({
+				center: [0, 0],
+				zoom: 9,
+				speed: 0.2,
+				curve: 1,
+				easing(t) {
+					return t;
+				}
+			});
+		});
+	</script>
+
+</body></html>
