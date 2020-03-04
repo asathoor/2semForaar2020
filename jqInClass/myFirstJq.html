@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Example Title</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<link rel="icon" type="image/x-icon" href="" />
+	<script 	
+	src="https://code.jquery.com/jquery-3.3.1.min.js" 
+		
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	
+	<style>
+		.yellow {
+			background-color: greenyellow;
+		}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<h1>Hello world</h1>
+	</header>
+	
+	<nav>
+		<div id="burger">
+			---- <br>
+			---- <br>
+			----
+		</div>
+		<div id="noBurger">
+			xxxxxx
+		</div>
+		<ul>
+			<li>menu a</li>
+			<li>menu b</li>
+			<li>menu c</li>
+		</ul>
+	</nav>
+	
+	<main>
+		<h2>Mojn World</h2>
+
+		<p id="one">soijdfalf <span class="red">af af ioaf oa foasfopafd fop</span> uifo adop aopf dpa opdf uposad fopa fpoa fpo fop aop opd fpa fo dafpa ofi</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum recusandae ipsam illo <span class="red"> nesciunt dolorum repellendus unde, harum beatae, repudiandae doloremque</span> quo dolore porro ullam adipisci et omnis aliquid excepturi earum.</p>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum recusandae ipsam illo <span class="red"> nesciunt dolorum repellendus unde, harum beatae, repudiandae doloremque</span> quo dolore porro ullam adipisci et omnis aliquid excepturi earum.</p>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum recusandae ipsam illo <span class="red"> nesciunt dolorum repellendus unde, harum beatae, repudiandae doloremque</span> quo dolore porro ullam adipisci et omnis aliquid excepturi earum.</p>
+		
+		
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum recusandae ipsam illo <span class="red"> nesciunt dolorum repellendus unde, harum beatae, repudiandae doloremque</span> quo dolore porro ullam adipisci et omnis aliquid excepturi earum.</p>
+	</main>
+	<footer></footer>
+	<script>
+		// allways start your script with a document ready function
+		$(document).ready(function() {
+			
+			$('p:nth-child(3)').css({
+				"background-color":"red",
+				"font-size":"3rem",
+				"color":"white"
+			});
+			
+			// on click I want to hide the image
+			$('img').click(function(){
+				$(this).hide(3000);
+			});
+
+			$('h1').css({
+				"background-color":"olive",
+				"font-size":"3rem",
+				"color":"white"
+			});
+			
+			for (let i=0; i<100; i++){
+				$('#one').append('<span class="yellow">... I will not do bad stuff again ever ...</span>');	
+			}
+	
+			// Ye olde hamburger menu 
+			$('#noBurger').hide(); // hide noburger
+
+			// event ... click ... hide ...
+			$('nav').click(
+				
+				function(){
+					// add "rules" for dom elements
+					$('#burger').hide();
+					$('nav ul').toggle(300);
+					$('#noBurger').show(); // show noBurger
+			
+				});
+			
+			// add a css class to an element by a click
+			$("h2").click(function(){
+  				$("p").addClass("yellow");
+			});
+			
+		}); // don't delete me, I am the end of the document ready function ...
+	</script>
+</body></html>
