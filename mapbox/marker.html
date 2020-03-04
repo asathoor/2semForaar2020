@@ -42,20 +42,21 @@
 
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';
-	
+
+	// geographical positions
     var monument = [10.185,56.179];
-	let mon2 = [11.300,56.111];
+	let mon2 = [11.300,56.111]; // new position
     
 	var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/asathoor/ck7d1fge80ihv1iodyv2wngjb',
         center: monument,
-        zoom: 15
+        zoom: 7
     });
 
-    // create the popups
+    // create the popup texts
     var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Mojn Do!'
+        'I am the original pop up.'
     );
 	
 	let pop2 = new mapboxgl.Popup({ offset: 25 }).setText(
@@ -66,10 +67,12 @@
     // create DOM element for the marker
     var el = document.createElement('div');
     el.id = 'marker';
+	el.classList.add("xxxx");
 	
-	// create DOM elementS for the marker
+	// create DOM elementS for the next marker
     var el2 = document.createElement('div');
     el2.id = 'mark2';
+	el2.classList.add("xxxx");
 
     // create the marker
     new mapboxgl.Marker(el)
