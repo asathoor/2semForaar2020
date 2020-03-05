@@ -29,10 +29,15 @@
 	// API: api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
 		let city = 'Aarhus';
 		const key = '201d090c9cceacfc8931df89310ebfbb';
-		const ow = 'api.openweathermap.org/data/2.5/weather?q='+ city + '&appid=' + key;
-	
+		const ow = 'https://api.openweathermap.org/data/2.5/weather?q='+ city + '&appid=' + key;
+		console.log(ow);
+		
 	// load data from OWM
 		// to be continued ...
+		$.getJSON(ow, function(data){
+			console.log(data.name);
+			$('#weather').append(data.name);
+		})
 	</script>
 </body>
 
