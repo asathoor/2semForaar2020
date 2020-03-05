@@ -35,8 +35,8 @@
 	// load data from OWM
 		// to be continued ...
 		$.getJSON(ow, function(data){
-			console.log(data.name);
-			$('#weather').append(data.name);
+			console.log(data); // test: what's in the object
+			$('#weather').append(data.name);	
 		})
 	</script>
 </body>
