@@ -3,6 +3,7 @@
  * project: mapbox workshop suggested solution
  **/
 $(document).ready(function () {
+	
     console.log("hi from js/js.js - the document is ready.");
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhdGhvb3IiLCJhIjoiY2oyd3hlbzU3MDA5NzJxbm9iMjczanJndCJ9.HahDB7Z1rrD5THIYQh6t4g';

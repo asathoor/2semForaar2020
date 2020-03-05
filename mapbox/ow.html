@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Example Title</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<link rel="icon" type="image/x-icon" href=""/>
+	
+	<!-- jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Open Weathermap</h1>
+	</header>
+	<main>
+		<h2>Response</h2>
+		<div id="weather"></div>
+		<div id="zz"></div>
+		<div id="ico"></div>
+	</main>
+	<footer>
+		Test: Open WeatherMap
+	</footer>
+	<script>
+	// API: api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
+		let city = 'Aarhus';
+		const key = '5af75fef93b71602a5c0b6046efd49c8';
+		const ow = 'https://api.openweathermap.org/data/2.5/weather?q='+ city + '&appid=' + key;
+		console.log(ow);
+		
+	// load data from OWM
+		// to be continued ...
+		$.getJSON(ow, function(data){
+			
+			console.log(data); // test: what's in the object
+			
+			$('#weather').append( data.name );
+			$('#zz').append( data.main.humidity );
+			let mySymbol = 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+			// "http://openweathermap.org/img/w/" + iconcode + ".png";
+			$('#ico').append( '<img src="' + mySymbol + '" alt="xx">' );	
+			
+		})
+	</script>
+</body>
+
+</html>
