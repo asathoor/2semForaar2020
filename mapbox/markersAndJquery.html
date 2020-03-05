@@ -9,7 +9,9 @@
 		Q: HOW CAN I ADD JQUERY ?? 
 		A: Use a CDN as below ...
 	-->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script -->
+	
+	<script src="js/jquery-3.4.1.min.js"></script>
 
 	<!-- mapbox related stuff -->
 	<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
@@ -125,10 +127,12 @@
 				'background-color' : 'black',
 				'color' : 'white'
 			}); 
+		
 		// JQ test
 
 		// User story: I want to click on an element and fly to a position ...
-		$('p:last-child').click(function() {
+		$('p:last-child').click(
+			function() {
 			
 			// fly with default options to null island
 			map.flyTo({
