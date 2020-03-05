@@ -3,7 +3,7 @@
  * purpose: workshop suggested solution
  **/
 
-/* css variables */
+/* basic styletile variables */
 :root {
   --col-1: orange;
   --col-2: black;
@@ -12,6 +12,8 @@
 }
 
 body {
+	background-color: var(--col-2);
+	color: var(--text-col-white);
     margin: 0px;
     padding: 0px;
 }
@@ -19,9 +21,9 @@ body {
 header, footer {
     background-color: var(--col-2);
     color: var(--text-col-white);
-    padding: 2rem;
     text-align: center;
-    height: 20vh;
+    height: 15vh;
+	padding-top: 2rem;
 }
 
 footer nav ul {
@@ -32,7 +34,7 @@ footer nav ul {
 
 #map {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
 }
 
 #btn_1 {
